@@ -1,0 +1,6 @@
+<table>
+  <tr *ngFor="let todo of todo$ | async; let i = index ">
+    <td>{{todo.task}}</td>
+    <td><button (click)="delete(i)">X</button></td>
+  </tr>
+</table>
