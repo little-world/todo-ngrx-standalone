@@ -7,6 +7,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import {StoreModule} from '@ngrx/store';
 import {reducers, todoReducer} from './todo.reducers';
 import {FormsModule} from '@angular/forms';
+import {EffectsModule} from '@ngrx/effects';
+import {ToDoEffects} from './todo.effects';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(ToDoEffects)
   ],
   providers: [],
   bootstrap: [AppComponent]
