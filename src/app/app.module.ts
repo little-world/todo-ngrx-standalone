@@ -20,7 +20,7 @@ import {ToDoEffects} from './todo.effects';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(ToDoEffects)
+    EffectsModule.forRoot([ToDoEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
